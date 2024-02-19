@@ -1,0 +1,29 @@
+.text_line {
+  animation: dash 5s linear forwards, filling 5s ease-in forwards;
+}
+
+.text_line text {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes filling {
+
+  0%,
+  90% {
+    fill: rgb(29, 228, 29);
+    fill-opacity: 0;
+  }
+
+  100% {
+    fill: rgb(29, 228, 29);
+    fill-opacity: 1;
+  }
+}
