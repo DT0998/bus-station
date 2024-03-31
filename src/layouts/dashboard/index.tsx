@@ -4,7 +4,6 @@ import "./index.scss";
 import SideBar from "./sidebar";
 import { Layout } from "antd";
 import HeaderMenu from "./header";
-import MyWallet from "../../components/MyWallet";
 import Footer from "./footer";
 
 const { Header, Sider, Content } = Layout;
@@ -45,7 +44,6 @@ function DashboardLayout(props: any) {
               <HeaderMenu collapsed={collapsed} onClickMenu={setCollapsed} />
             </Header>
           </div>
-          <MyWallet />
           <Content className="content p-8 text-white flex-grow">{children}</Content>
           <Footer />
         </Layout>

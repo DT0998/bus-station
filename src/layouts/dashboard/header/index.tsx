@@ -5,18 +5,11 @@ import "./index.scss";
 import { FaWallet } from "react-icons/fa";
 import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
 import useMediaQuery from "../../../utils/hook/useMediaquery";
-import { useAppDispatch } from "../../../config/store";
-import { toggleMenu } from "../../../redux/layout/sidebar/slice";
 
 const { Search } = Input;
 function Header(props: any) {
   const { collapsed } = props;
-  const dispatch = useAppDispatch();
   const isTablet = useMediaQuery("(max-width: 768px)");
-
-  const openDrawer = () => {
-    dispatch(toggleMenu());
-  };
 
   // search
   const onSearch = (value: any) => console.log(value);
@@ -41,9 +34,6 @@ function Header(props: any) {
       >
         {isTablet && collapsedMenu}
       </div>
-      {!isTablet && (
-        <FaWallet onClick={openDrawer} className="text-white text-lg" />
-      )}
     </div>
   );
 }

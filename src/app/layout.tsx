@@ -1,6 +1,4 @@
-"use client";
 import "../assets/styles/globals.css";
-import ReduxProvider from "../config/redux-provider";
 
 export default function RootLayout({
   children,
@@ -10,7 +8,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ReduxProvider>{children}</ReduxProvider>
+        {children}
       </body>
     </html>
   );
