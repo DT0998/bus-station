@@ -1,15 +1,14 @@
 import React from "react";
-import useCount from "../../store/count";
+import useCounterStore from "../../store/count";
 
-function HomePage() {
+export default async function Page() {
   return (
     <React.Fragment>
       <h1 className="my-4 p-3 text-3xl font-bold underline">
-        Articles server synced with client
-        <p>{useCount.getState().count} people</p>
+        Counter server synced with client
+        <p>{useCounterStore.getState().counter} people</p>
         {/* <button onClick={increaseCount}>increase me</button> */}
       </h1>
     </React.Fragment>
   );
 }
-export default HomePage;

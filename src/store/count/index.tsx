@@ -1,13 +1,13 @@
 import { create } from "zustand";
 
-type StoreCount = {
-  count: number;
+interface ICounterStore {
+  counter: number;
   increaseCount: () => void;
-};
+}
 
-const useCount = create<StoreCount>()((set) => ({
-  count: 1,
-  increaseCount: () => set((state) => ({ count: state.count + 1 })),
+const useCounterStore = create<ICounterStore>()((set) => ({
+  counter: 1,
+  increaseCount: () => set((state) => ({ counter: state.counter + 1 })),
 }));
 
-export default useCount;
+export default useCounterStore;
