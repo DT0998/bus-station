@@ -1,6 +1,5 @@
-"use client";
-import DashboardLayout from "../layouts/dashboard";
+import HomePage from "./home/page";
 
-export default function Home() {
-  return <DashboardLayout>Home</DashboardLayout>;
+export default function Page() {
+  return <HomePage />;
 }
